@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Macdonald's</title>
+    <link href="style/style.css" rel="stylesheet">  <!--très important, relie le css au html-->
+    <link href="fonts/Mclawsuit-3ZwL.ttf" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap" rel="stylesheet">
+    <script src="script/slider.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+          <div class="logo">
+            <h1>M</h1>
+          </div>
+          <ul>
+            <li>
+              <a href="#">Nouveauté</a>
+            </li>
+            <li>
+              <a href="#">Menu</a>
+            </li>
+            <li>
+              <a href="#">McCafé</a>
+            </li>
+            <li class="button">
+              <a href="#">Connexion</a>
+            </li>
+          </ul>
+      </div>
+    </div>
+
+
+      <div class="block1">
+        <h2 class="title">THE TRIPLE</h2>
+        <h2 class="title2">CHEDDAR &</h2>
+        <h2 class="title3">DOUBLE BEEF</h2>
+        <div class="image">
+          <img src="images/burger1.png" alt="burger">
+        </div>
+        <h3>DISPONIBLE MAINTENANT</h3>
+        <div class="button3">
+          <a href="#">Découvrir</a>
+        </div>
+      </div>
+
+      <div class="block2">
+        <h2>Les nouveautés</h2>
+        <div id="slider">
+          <div class="image2">
+            <img src="images/burger1.png" alt="burger" id="slide1">
+          </div>
+          <div class="arrow">
+            <div id="precedent" onclick="ChangeSlide1(-1)">
+              <img src="images/chevron-left.png" alt="arrow">
+            </div>
+            <div class="text">
+              <p id="slidetext">The Triple Cheddar & Double Beef</p>
+            </div>
+            <div id="suivant" onclick="ChangeSlide1(1);">
+              <img src="images/chevron-right.png" alt="arrow">
+            </div>
+          </div>
+          <div class="button2">
+            <a href="#">Découvrir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="block3">
+        <img src="images/en famille.png" alt="enfamille">
+          <h2>En FAMILLE</h2>
+          <h3>Ensemble avec la fondation</h3>
+          <div class="button3">
+            <a href="#">Découvrir</a>
+          </div>
+      </div>
+
+      <div class="block4">
+        <h2>Nos Produits</h2>
+        <div class="menu2">
+          <ul>
+            <li>
+              <a href="#">Boîte à partager</a>
+            </li>
+            <li>
+              <a href="#">Burgers</a>
+            </li>
+            <li>
+              <a href="#">Wraps</a>
+            </li>
+            <li>
+              <a href="#">Desserts</a>
+            </li>
+          </ul>
+        </div>
+        <div class="presentation">
+          <div class="ligne">
+            <div class="carte">
+              <img src="images/burger2.png" alt="burger">
+              <h4>Le Tennessee BBQ & Smoky Cheddar</h4>
+              <p>Découvrez son irresistible goût fumé</p>
+              <div class="button3">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+            <div class="carte">
+              <img src="images/burger3.png" alt="burger">
+              <h4>Le M de McDonald's</h4>
+              <p>Découvrez son irresistible goût fumé</p>
+              <div class="button3">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+          </div>
+          <div class="ligne">
+            <div class="carte">
+              <img src="images/burger4.png" alt="burger">
+              <h4>Le CBO Chicken Bacon Onion</h4>
+              <p>Découvrez son irresistible goût fumé</p>
+              <div class="button3">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+            <div class="carte">
+              <img src="images/burger5.png" alt="burger">
+              <h4>Le Tennessee BBQ & Smoky Cheddar</h4>
+              <p>Découvrez son irresistible goût fumé</p>
+              <div class="button3">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
