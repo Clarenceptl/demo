@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body{
@@ -11,11 +12,15 @@ body{
   align-items: center;
   display: flex;
 }
+@font-face{
+  font-family: "macdofont";
+  src: url('fonts/mclawsuit.ttf');
+}
 .logo h1{
   padding-left: 20px;
   padding-top: 35px;
   padding-bottom: 35px;
-  font-family: 'Mclawsuit';
+  font-family: 'macdofont';
   font-size: 68px;
   color: white;
 }
@@ -122,29 +127,74 @@ font-size: 30px;
   flex-direction: column;
   align-items: center;
 }
-#slider .image2{
+.scene {
+  margin: 40px 0;
+  position: relative;
+  width: 450px;
+  height: 490px;
+  margin: 40px auto;
+  perspective: 1000px;
+  
+}
+
+.carousel {
   width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateZ(-130px);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.carousel__cell {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  line-height: 116px;
+  background: white;
+}
+
+.carousel__cell:nth-child(3n+1) { 
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-#slider .image2 img{
-  width: 60%;
-  height: auto;
+.carousel__cell:nth-child(3n+2) { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
+.carousel__cell:nth-child(3n+3) { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(130px); }
+.carousel__cell:nth-child(2) { transform: rotateY( 120deg) translateZ(130px); }
+.carousel__cell:nth-child(3) { transform: rotateY( 240deg) translateZ(130px); }
+
 .arrow{
   display: flex;
   width: 100%;
   margin-bottom: 68px;
 }
 .arrow #precedent{
+  display: flex;
   width: 30%;
+  justify-content: flex-start;
+}
+.arrow img{
+  top : 20px;
 }
 .arrow .text{
   width: 40%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center;  */
 }
 .arrow .text p{
   color: #101010;
@@ -157,6 +207,7 @@ font-size: 30px;
   display: flex;
   width: 30%;
   justify-content: flex-end;
+  
 }
 .block3 {
   width: 100%;
@@ -240,13 +291,24 @@ font-size: 30px;
   padding-left: 210px;
   margin-bottom: 52px;
 }
+.block4 .menu2 li {
+  cursor: pointer;
+}
 
-.block4 .menu2 li a{
+.block4 .menu2 li p{
   font-size: 30px;
   font-family: 'Montserrat';
   font-weight: normal;
   text-decoration: none;
   color: #101010;
+}
+.block4 .menu2 li p:hover{
+  
+  color: #ffe600;
+}
+.block4 .menu2 li p:visited{
+  
+  color: #ffe600;
 }
 .presentation{
   width: 100%;
@@ -269,6 +331,18 @@ text-align: center;
   margin-bottom: 53px;
   margin-top: 43px;
   text-align: center;
+}
+.presentation.burger{
+  display: block;
+}
+.presentation.boite{
+  display: none;
+}
+.presentation.desserts{
+  display: none;
+}
+.presentation.wraps{
+  display: none;
 }
 .ligne{
   display: flex;
