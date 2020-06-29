@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <title>Macdonald's</title>
     <link href="style/style.css" rel="stylesheet">  <!--très important, relie le css au html-->
-    <link href="fonts/Mclawsuit-3ZwL.ttf" rel="stylesheet">
+    <link href="fonts/mclawsuit.ttf" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap" rel="stylesheet">
-    <script src="script/slider.js"></script>
+    
   </head>
   <body>
     <div class="container">
       <div class="header">
           <div class="logo">
-            <h1>M</h1>
+            <!-- <h1>M</h1> -->
+            <img src="images/McDonalds-Logo2.png" alt="logo">
           </div>
           <ul>
             <li>
@@ -29,9 +30,7 @@
             </li>
           </ul>
       </div>
-    </div>
-
-
+    
       <div class="block1">
         <h2 class="title">THE TRIPLE</h2>
         <h2 class="title2">CHEDDAR &</h2>
@@ -48,17 +47,27 @@
       <div class="block2">
         <h2>Les nouveautés</h2>
         <div id="slider">
-          <div class="image2">
-            <img src="images/burger1.png" alt="burger" id="slide1">
+          <div class="scene">
+            <div class="carousel">
+              <div class="carousel__cell">
+                <img src="images/burger1.0.png" alt="">
+              </div>
+              <div class="carousel__cell">
+                <img src="images/mcflurry.png" alt="">
+              </div>
+              <div class="carousel__cell">
+                <img src="images/salade.png" alt="">
+              </div>
+            </div>
           </div>
           <div class="arrow">
-            <div id="precedent" onclick="ChangeSlide1(-1)">
+            <div id="precedent" class="previous-button" onclick="ChangeSlide1(-1)">
               <img src="images/chevron-left.png" alt="arrow">
             </div>
             <div class="text">
               <p id="slidetext">The Triple Cheddar & Double Beef</p>
             </div>
-            <div id="suivant" onclick="ChangeSlide1(1);">
+            <div id="suivant" class="next-button" onclick="ChangeSlide1(1);">
               <img src="images/chevron-right.png" alt="arrow">
             </div>
           </div>
@@ -81,21 +90,21 @@
         <h2>Nos Produits</h2>
         <div class="menu2">
           <ul>
-            <li>
-              <a href="#">Boîte à partager</a>
-            </li>
-            <li>
-              <a href="#">Burgers</a>
-            </li>
-            <li>
-              <a href="#">Wraps</a>
-            </li>
-            <li>
-              <a href="#">Desserts</a>
-            </li>
+              <li class="boite">
+                <p>Boîte à partager</p>
+              </li>
+              <li class="burger">
+                <p>Burgers</p>
+              </li>
+              <li class="wraps">
+                <p>Wraps</p>
+              </li>
+              <li class="desserts">
+                <p>Desserts</p>
+              </li>
           </ul>
         </div>
-        <div class="presentation">
+        <div class="presentation burger">
           <div class="ligne">
             <div class="carte">
               <img src="images/burger2.png" alt="burger">
@@ -125,8 +134,122 @@
             </div>
             <div class="carte">
               <img src="images/burger5.png" alt="burger">
+              <h4>Le Big Mac</h4>
+              <p>Un classique qu'on ne présente plus</p>
+              <div class="button3">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="presentation boite">
+          <div class="ligne">
+            <div class="carte">
+              <img src="images/boite20.png" alt="boite">
+              <h4>Les 20 Chicken Mcnuggets™</h4>
+              <p>À partager sans plus attendre !</p>
+              <div class="button3">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+            <div class="carte">
+              <img src="images/boite-chèvre.png" alt="boite">
+              <h4>La Boîte à Partager Chèvre</h4>
+              <p>3 Chèvres Panés, 3 Chicken Sticks et 6 Chicken McNuggets™</p>
+              <div class="button3">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+          </div>
+          <div class="ligne">
+            <div class="carte">
+              <img src="images/boite simple.png" alt="boite">
+              <h4>Les Chicken Mcnuggets™</h4>
+              <p>À déguster seul ou accompagné. Disponibles en portions de 4, 6 ou 9</p>
+              <div class="button3">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+            <!-- <div class="carte">
+              <img src="images/burger5.png" alt="boite">
               <h4>Le Tennessee BBQ & Smoky Cheddar</h4>
               <p>Découvrez son irresistible goût fumé</p>
+              <div class="button3">
+                <a href="#">Découvrir</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="presentation desserts">
+          <div class="ligne">
+            <div class="carte">
+              <img src="https://ws.mcdonalds.fr/media/e8/ae/6a/e8ae6aba86f6e5af4436168f226840a9b6afefa4" alt="dessert">
+              <h4>Mcflurry</h4>
+              <p>Inventez le McFlurry™ de vos rêves !</p>
+              <div class="button3">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+            <div class="carte">
+              <img src="https://ws.mcdonalds.fr/media/68/34/83/683483f2034554c4873fdd8ccad6f670b07a2344" alt="very parfait">
+              <h4>Le Very Parfait</h4>
+              <p>Découvrez la douceur de cette chantilly</p>
+              <div class="button3">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+          </div>
+          <div class="ligne">
+            <div class="carte">
+              <img src="images/sunday.png" alt="sundae">
+              <h4>Sundae</h4>
+              <p>Craquez pour un plaisir glacé au lait avec des éclats de cacahuètes</p>
+              <div class="button3">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+            <div class="carte">
+              <img src="https://ws.mcdonalds.fr/media/1f/8a/16/1f8a16f827c7896447cd443f8e34c419125a0235" alt="burger">
+              <h4>Mon petit Ice Squeeze</h4>
+              <p>Un dessert glacé saveur vanille pour une touche de douceur dans ton Happy Meal !</p>
+              <div class="button3">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="presentation wraps">
+          <div class="ligne">
+            <div class="carte">
+              <img src="images/wrapchèvre.png" alt="wrap">
+              <h4>Wrap Chèvre</h4>
+              <p>Pour les amoureux du fromage</p>
+              <div class="button3">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+            <div class="carte">
+              <img src="images/wrap_poulet_bacon.png" alt="wrap">
+              <h4>LE MCWRAP™ NEW YORK & POULET BACON</h4>
+              <p>Un mariage qui fait chavirer nos papilles : du poulet croustillant et un délicieux bacon fumé au bois de hêtre.</p>
+              <div class="button3">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+          </div>
+          <div class="ligne">
+            <div class="carte">
+              <img src="images/wrap_veggie.png" alt="wrap">
+              <h4>Le Mcwrap™ Veggie</h4>
+              <p>Le wrap est composé de deux palets panés de légume</p>
+              <div class="button3">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+            <div class="carte">
+              <img src="images/petit wrap.png" alt="wrap">
+              <h4>Le P'tit Ranch</h4>
+              <p>Une recette gourmande pour les petites faims</p>
               <div class="button3">
                 <a href="#">Découvrir</a>
               </div>
@@ -134,5 +257,8 @@
           </div>
         </div>
       </div>
+    </div>
+    <script src="script/slider.js"></script>
   </body>
 </html>
+
